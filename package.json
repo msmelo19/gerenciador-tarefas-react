@@ -12,11 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "css-loader": "^5.0.2",
     "file-loader": "^6.2.0",
+    "history": "^5.0.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
-    "style-loader": "^2.0.0"
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
