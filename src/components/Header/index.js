@@ -16,8 +16,6 @@ export default function Header() {
         <Navbar.Brand href="/">
           <img src="src/assets/img/logo.svg" alt="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" />
         <Nav className="ml-auto">
           <Nav.Link>
             <Button variant="primary-custom">Cadastre-se</Button>
