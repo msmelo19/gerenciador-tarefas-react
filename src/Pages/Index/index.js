@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Col, Image, Row, Button,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import {
   CustomContainer, MainHeader, SubHeader, CustomColHeader,
@@ -24,7 +25,9 @@ export default function Index() {
           </Row>
           <Row style={{ paddingLeft: '15px' }}>
             <Col lg={4} style={{ padding: '0px' }}>
-              <Button variant="primary-custom">Cadastre-se</Button>
+              <Link to="/register">
+                <Button variant="primary-custom">Cadastre-se</Button>
+              </Link>
             </Col>
             <Col lg={4} style={{ padding: '0px' }}>
               <Button variant="link-primary-custom">Mais informações</Button>

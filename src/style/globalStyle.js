@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { rgba } from 'polished';
 import * as colors from '../config/colors';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -73,6 +74,7 @@ export default createGlobalStyle`
   }
 
   .btn-outline-primary-custom {
+    height: 42px;
     border: 2px solid ${colors.primaryColor};
     color: ${colors.primaryColor};
     font-style: normal;
@@ -111,6 +113,14 @@ export default createGlobalStyle`
     }
     &:focus{
       box-shadow: none;
+    }
+  }
+
+  .form-control {
+    border: 1px solid ${colors.primaryColor};
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem ${rgba(colors.primaryColor, 0.40)};
     }
   }
 `;
