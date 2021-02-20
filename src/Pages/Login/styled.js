@@ -5,7 +5,6 @@ import * as colors from '../../config/colors';
 export const HeaderRegister = styled.h2`
   font-weight: bold;
   color: ${colors.primaryColor};
-  white-space: nowrap;
 `;
 
 export const BackgroundContainer = styled(Container)`

@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Container, Row, Col, Image, Navbar, Form, Button,
 } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 import { HeaderRegister, BackgroundContainer, FormCustom } from './styled';
 import Item from '../../components/Header/styled';
