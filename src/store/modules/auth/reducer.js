@@ -8,11 +8,6 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case types.LOGIN_REQUEST: {
-      const newState = { ...state };
-      return newState;
-    }
-
     case types.LOGIN_FAILURE: {
       delete axios.defaults.headers.Authorization;
       return initialState;

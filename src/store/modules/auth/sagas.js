@@ -21,6 +21,16 @@ function* loginRequest({ payload }) {
   }
 }
 
+function* registerRequest({ payload }) {
+  const { name, email, password } = payload;
+  try {
+    yield call(axios.post, '/user/', { name, email, password });
+    yield put(actions.loginRequest(payload));
+  } catch (err) {
+    yield put(actions.loginFailure());
+  }
+}
+
 function persistRehydrate({ payload }) {
   const token = get(payload, 'auth.token', '');
 
@@ -31,4 +41,5 @@ function persistRehydrate({ payload }) {
 export default all([
   takeLatest(types.LOGIN_REQUEST, loginRequest),
   takeLatest(types.PERSIST_REHYDRATE, persistRehydrate),
+  takeLatest(types.REGISTER_REQUEST, registerRequest),
 ]);
