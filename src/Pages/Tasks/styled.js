@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+import { Container } from 'react-bootstrap';
 import * as colors from '../../config/colors';
 
-const Header3Secondary = styled.h3`
-  color: ${colors.secondaryColor};
+const BgPrimaryColor = styled(Container)`
+  margin-top: 4em;
+  background-color: ${colors.primaryColor};
+  height: 600px;
 `;
 
-export default Header3Secondary;
+export default BgPrimaryColor;

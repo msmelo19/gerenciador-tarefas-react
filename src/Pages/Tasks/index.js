@@ -1,29 +1,34 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import axios from '../../services/axios';
 
-import Header3Secondary from './styled';
+import { Container, Row, Col } from 'react-bootstrap';
+import Greetings from './Modules/Greetings';
+import NextTasks from './Modules/NextTasks';
+import DaysTasks from './Modules/DaysTasks';
+import Calendar from './Modules/Calendar';
+import BgPrimaryColor from './styled';
 
 export default function Tasks() {
-  const [userName, setUserName] = React.useState('');
-
-  React.useEffect(() => {
-    async function getData() {
-      const response = await axios.get('/user/');
-      const { name } = response.data;
-      setUserName(name.split(' ')[0]);
-    }
-
-    getData();
-  }, []);
-
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Header3Secondary>{`Olá, ${userName}`}</Header3Secondary>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Greetings />
+      <BgPrimaryColor fluid>
+        <Container>
+          <Row>
+            <Col>
+              <NextTasks />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col lg={{ order: 'last' }}>
+              <Calendar />
+            </Col>
+            <Col lg={{ order: 'first' }}>
+              <DaysTasks />
+            </Col>
+          </Row>
+        </Container>
+      </BgPrimaryColor>
+    </>
   );
 }
