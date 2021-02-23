@@ -17,7 +17,7 @@ export default function Header() {
 
   if (location.pathname === '/') {
     return (
-      <Navbar expand="md">
+      <Navbar expand="md" className="mb-5">
         <Container>
 
           <Link to="/">

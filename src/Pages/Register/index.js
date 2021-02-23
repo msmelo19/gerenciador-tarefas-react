@@ -69,7 +69,7 @@ export default function Register(props) {
 
   return (
     <BackgroundContainer fluid>
-      <Navbar expand="md">
+      <Navbar expand="md" className="mb-5">
         <Container>
           <Link to="/">
             <Item>
