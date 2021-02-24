@@ -9,7 +9,9 @@ import {
 
 import * as actions from '../../store/modules/auth/actions';
 
-import { HeaderRegister, BackgroundContainer, FormCustom } from './styled';
+import {
+  HeaderRegister, BackgroundContainer, FormCustom, ColImage,
+} from './styled';
 import Item from '../../components/Header/styled';
 import * as colors from '../../config/colors';
 
@@ -81,10 +83,10 @@ export default function Register(props) {
 
       <Container fluid>
         <Row>
-          <Col md={6}>
+          <ColImage lg={6}>
             <Image src="src/assets/img/draw-register.svg" alt="Ilustração de Cadastro" className="m-auto" fluid />
-          </Col>
-          <Col md={6}>
+          </ColImage>
+          <Col lg={6}>
             <HeaderRegister className="text-center">Cadastre-se</HeaderRegister>
 
             <FormCustom onSubmit={handleSubmit} className="d-flex flex-column">

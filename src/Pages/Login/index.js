@@ -9,7 +9,9 @@ import {
 
 import * as actions from '../../store/modules/auth/actions';
 
-import { HeaderRegister, BackgroundContainer, FormCustom } from './styled';
+import {
+  HeaderLogin, BackgroundContainer, FormCustom, ColImage,
+} from './styled';
 import Item from '../../components/Header/styled';
 import * as colors from '../../config/colors';
 
@@ -65,11 +67,11 @@ export default function Login(props) {
 
       <Container fluid>
         <Row>
-          <Col md={6} className="d-flex justify-content-center align-items-center">
+          <ColImage lg={6}>
             <Image src="src/assets/img/draw-login.svg" alt="Ilustração de Login" className="m-auto" fluid />
-          </Col>
-          <Col md={6}>
-            <HeaderRegister className="text-center">Entre na sua conta</HeaderRegister>
+          </ColImage>
+          <Col lg={6}>
+            <HeaderLogin className="text-center">Entre na sua conta</HeaderLogin>
 
             <FormCustom onSubmit={handleSubmit} className="d-flex flex-column">
               <Form.Group controlId="input-email">

@@ -8,7 +8,6 @@ import Header from './components/Header';
 import GlobalStyle from './style/globalStyle';
 import Routes from './routes';
 import store, { persistor } from './store';
-import history from './services/history';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class App extends React.Component {
