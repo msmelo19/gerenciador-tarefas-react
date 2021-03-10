@@ -18,6 +18,9 @@ export default function NavUserLoggedIn() {
   return (
     <Nav>
       <Item>
+        <Button variant="link-primary-custom">
+          Adicionar tarefa
+        </Button>
         <Button variant="link-primary-custom" onClick={handleClickLogout}>
           Sair
         </Button>

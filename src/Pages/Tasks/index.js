@@ -1,13 +1,15 @@
 import React from 'react';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import Greetings from './Modules/Greetings';
-import NextTasks from './Modules/NextTasks';
-import DaysTasks from './Modules/DaysTasks';
-import Calendar from './Modules/Calendar';
+import Greetings from './Subcomponents/Greetings';
+import NextTasks from './Subcomponents/NextTasks';
+import DaysTasks from './Subcomponents/DaysTasks';
+import MyCalendar from './Subcomponents/Calendar';
 import BgPrimaryColor from './styled';
 
 export default function Tasks() {
+  const [date, setDate] = React.useState(new Date());
+
   return (
     <>
       <Greetings />
@@ -21,10 +23,10 @@ export default function Tasks() {
 
           <Row>
             <Col lg={{ order: 'last' }}>
-              <Calendar />
+              <MyCalendar date={date} setDate={setDate} />
             </Col>
             <Col lg={{ order: 'first' }}>
-              <DaysTasks />
+              <DaysTasks date={date} />
             </Col>
           </Row>
         </Container>

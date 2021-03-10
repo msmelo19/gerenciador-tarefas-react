@@ -6,7 +6,7 @@ import * as colors from '../../config/colors';
 const BgPrimaryColor = styled(Container)`
   margin-top: 4em;
   background-color: ${colors.primaryColor};
-  height: 600px;
+  min-height: 100vh;
 `;
 
 export default BgPrimaryColor;
