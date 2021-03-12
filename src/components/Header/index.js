@@ -15,22 +15,23 @@ export default function Header() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const location = useLocation();
 
-  if (location.pathname === '/') {
-    return (
-      <Navbar expand="md" className="mb-5">
-        <Container>
-
-          <Link to="/">
-            <Item>
-              <img src="src/assets/img/logo.svg" alt="logo" />
-            </Item>
-          </Link>
-
-          {isLoggedIn ? (<NavUserLoggedIn />) : (<NavLandingPage />)}
-
-        </Container>
-      </Navbar>
-    );
+  if (location.pathname === '/login' || location.pathname === '/register') {
+    return <></>;
   }
-  return <></>;
+
+  return (
+    <Navbar expand="md" className="mb-5">
+      <Container>
+
+        <Link to="/">
+          <Item>
+            <img src="src/assets/img/logo.svg" alt="logo" />
+          </Item>
+        </Link>
+
+        {isLoggedIn ? (<NavUserLoggedIn />) : (<NavLandingPage />)}
+
+      </Container>
+    </Navbar>
+  );
 }

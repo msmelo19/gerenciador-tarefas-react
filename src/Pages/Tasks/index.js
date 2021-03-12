@@ -10,6 +10,10 @@ import BgPrimaryColor from './styled';
 export default function Tasks() {
   const [date, setDate] = React.useState(new Date());
 
+  React.useEffect(() => {
+    date.setHours(0, 0, 0, 0);
+  }, []);
+
   return (
     <>
       <Greetings />

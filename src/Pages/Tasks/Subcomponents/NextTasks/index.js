@@ -3,7 +3,8 @@ import { get } from 'lodash';
 
 import axios from '../../../../services/axios';
 import {
-  NextTasksDiv, H5BoldPrimary, DivTasks, DivContainer, H4BoldPrimary,
+  NextTasksDiv, H5BoldPrimary, DivTasks, DivContainer, H4BoldPrimary, H6BoldSecondary,
+  LinkNoTxtDecoration, H6,
 } from '../rootStyled';
 
 export default function NextTasks() {
@@ -22,19 +23,23 @@ export default function NextTasks() {
   }, []);
 
   function printNoTaskMessage() {
-    return (<p>Não há tarefas para hoje</p>);
+    return (<H6BoldSecondary style={{ margin: 'auto' }}>Não há tarefas para hoje</H6BoldSecondary>);
   }
 
   function showTasks() {
     return tasks.map((task) => (
-      <DivTasks key={String(task.id)}>
-        <H4BoldPrimary>{task.title}</H4BoldPrimary>
-        <h5>
-          {`${new Date(task.start_date).getUTCHours()}:${new Date(task.start_date).getUTCMinutes()}\
-           - \
-          ${new Date(task.final_date).getUTCHours()}:${new Date(task.final_date).getUTCMinutes()}`}
-        </h5>
-      </DivTasks>
+      <LinkNoTxtDecoration to={`/task/${task.id}`}>
+        <DivTasks key={String(task.id)}>
+          <H4BoldPrimary>{task.title}</H4BoldPrimary>
+          <H6>
+            {`${new Date(task.start_date).getHours()}:${new Date(task.start_date).getMinutes()
+              .toString().replace(/^(\d)$/, '0$1')}\
+            - \
+            ${new Date(task.final_date).getHours()}:${new Date(task.final_date).getMinutes()
+              .toString().replace(/^(\d)$/, '0$1')}`}
+          </H6>
+        </DivTasks>
+      </LinkNoTxtDecoration>
     ));
   }
 

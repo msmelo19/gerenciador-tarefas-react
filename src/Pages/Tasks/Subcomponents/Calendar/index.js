@@ -15,7 +15,7 @@ export default function MyCalendar({ date, setDate }) {
           <H5BoldPrimary>Calendário</H5BoldPrimary>
         </Row>
         <Row>
-          <DivContainer style={{ margin: 'auto' }}>
+          <DivContainer className="d-flex justify-content-center">
             <Calendar value={date} onChange={setDate} />
           </DivContainer>
         </Row>

@@ -99,6 +99,30 @@ export default createGlobalStyle`
     }
   }
 
+  .btn-link-primary-danger-custom {
+    height: 42px;
+    color: ${colors.primaryColor};
+    font-style: normal;
+    font-weight: bold;
+    padding: 8px 32px;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: ${colors.alertColorLighter};
+      border-color: ${colors.alertColorLighter};
+      color: ${colors.whiteColor2};
+    }
+
+    &:active{
+      background-color: ${colors.alertColorDarker};
+      border-color: ${colors.alertColorDarker};
+      color: ${colors.whiteColor0};
+    }
+    &:focus{
+      box-shadow: none;
+    }
+  }
+
   .btn-link-primary-custom {
     color: ${colors.primaryColor};
     font-style: normal;

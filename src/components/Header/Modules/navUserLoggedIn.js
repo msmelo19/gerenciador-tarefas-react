@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import {
   Nav, Button,
@@ -18,12 +19,11 @@ export default function NavUserLoggedIn() {
   return (
     <Nav>
       <Item>
-        <Button variant="link-primary-custom">
-          Adicionar tarefa
-        </Button>
-        <Button variant="link-primary-custom" onClick={handleClickLogout}>
-          Sair
-        </Button>
+        <Link to="/">
+          <Button variant="link-primary-custom" onClick={handleClickLogout}>
+            Sair
+          </Button>
+        </Link>
       </Item>
     </Nav>
   );
