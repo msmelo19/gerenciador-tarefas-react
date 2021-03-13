@@ -39,8 +39,13 @@ export default function Task({ match, history }) {
         setTitle(data.title);
         setPriority(data.priority);
         setDescription(data.description);
-        setStartTime(new Date(data.start_date).toISOString().slice(0, -5));
-        setFinalTime(new Date(data.final_date).toISOString().slice(0, -5));
+
+        const date1 = new Date(data.start_date);
+        setStartTime(new Date(date1.getTime() - (date1.getTimezoneOffset() * 60000))
+          .toISOString().slice(0, -5));
+        const date2 = new Date(data.final_date);
+        setFinalTime(new Date(date2.getTime() - (date2.getTimezoneOffset() * 60000))
+          .toISOString().slice(0, -5));
       } catch (err) {
         console.log(err);
       }
