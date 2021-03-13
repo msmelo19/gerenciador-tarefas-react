@@ -3,7 +3,6 @@ import { rgba } from 'polished';
 import * as colors from '../config/colors';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
   * {
@@ -149,15 +148,4 @@ export default createGlobalStyle`
     }
   }
 
-  body .Toastify .Toastify__toast-container .Toastify__toast--success {
-    background-color: ${colors.successColor};
-  }
-
-  body .Toastify .Toastify__toast-container .Toastify__toast--error {
-    background-color: ${colors.alertColor};
-  }
-
-  body .Toastify .Toastify__toast-container .Toastify__toast--info {
-    background-color: ${colors.informationColor};
-  }
 `;

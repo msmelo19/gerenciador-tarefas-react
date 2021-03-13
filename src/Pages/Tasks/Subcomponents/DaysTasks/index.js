@@ -53,11 +53,11 @@ export default function DaysTasks({ date }) {
         <DivTasks key={String(task.id)}>
           <H4BoldPrimary>{task.title}</H4BoldPrimary>
           <H6>
-            {`${new Date(task.start_date).getHours()}:${new Date(task.start_date).getMinutes()
-              .toString().replace(/^(\d)$/, '0$1')}\
-            - \
-            ${new Date(task.final_date).getHours()}:${new Date(task.final_date).getMinutes()
-              .toString().replace(/^(\d)$/, '0$1')}`}
+            {`${new Date(task.start_date).getHours().toString().replace(/^(\d)$/, '0$1')}:
+              ${new Date(task.start_date).getMinutes().toString().replace(/^(\d)$/, '0$1')}
+            -
+            ${new Date(task.final_date).getHours().toString().replace(/^(\d)$/, '0$1')}:
+            ${new Date(task.final_date).getMinutes().toString().replace(/^(\d)$/, '0$1')}`}
           </H6>
         </DivTasks>
       </LinkNoTxtDecoration>
