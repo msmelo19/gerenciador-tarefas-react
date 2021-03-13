@@ -16,7 +16,7 @@ export default function MyCalendar({ date, setDate }) {
         </Row>
         <Row>
           <DivContainer className="d-flex justify-content-center">
-            <Calendar value={date} onChange={setDate} />
+            <Calendar value={date} onChange={setDate} calendarType="US" />
           </DivContainer>
         </Row>
       </Container>
